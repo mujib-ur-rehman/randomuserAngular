@@ -1,0 +1,24 @@
+<h1>Display User</h1>
+<button (click)='getuser()'>Get User</button>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Gender</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Email</th>
+    <th>DOB</th>
+    <th>Age</th>
+    <th>Phone</th>
+  </tr>
+  <tr *ngFor="let data of users">
+    <td>{{data.id.value}}</td>
+    <td>{{data.gender}}</td>
+    <td>{{data.name.first}}</td>
+    <td>{{data.location.city}}</td>
+    <td>{{data.email}}</td>
+    <td>{{data.dob.date}}</td>
+    <td>{{data.dob.age}}</td>
+    <td>{{data.phone}}</td>
+  </tr>
+</table>
